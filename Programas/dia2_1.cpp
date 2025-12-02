@@ -1,22 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//Funcion que mira entre el rango 'inicio' y 'fin' los posibles invalidos
 long long invalidos(long long inicio, long long fin) {
     if (inicio > fin) 
         return 0;
 
     if (inicio == fin) {
         string s = to_string(inicio);
+
         if (s.size() % 2 != 0) {  
             return 0; 
         }
+
+        //Comprobar si en ambas mitades se repite un patron
         int mid = s.size() / 2;
         string p1 = s.substr(0, mid);
         string p2 = s.substr(mid);
+
         if (p1 == p2) {
-            return inicio; // ¡Es inválido! Devolvemos el número para sumarlo
+            //Invalido
+            return inicio; 
         } else {
-            return 0;      // Es válido, no sumamos
+            //Valido
+            return 0;     
         } 
     }
 
@@ -28,6 +35,7 @@ long long invalidos(long long inicio, long long fin) {
 
 
 int main(){
+    //Obtener datos del archivo
     ifstream input("input.txt");
     if(!input.is_open()){ 
         cerr << "Error, el archivo no se puede abrir" << endl;
@@ -36,14 +44,21 @@ int main(){
 
     long long invalidos_totales = 0;
     string linea;
+
     while (getline(input, linea)){
         stringstream ss(linea);
         string segmento;
+
+        //Leer hasta la coma
         while (getline(ss, segmento, ',')) {
+            //Sacar la posicion del guion
             int guion = segmento.find("-");
 
+            //Separamos los valores limitados por el guion
             long long inicio = stoll(segmento.substr(0, guion));
             long long fin = stoll(segmento.substr(guion + 1));
+            
+            //Suma de los valores invalidos
             invalidos_totales += invalidos(inicio, fin);
         }
         

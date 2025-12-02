@@ -20,27 +20,33 @@ int main(){
         return 1;
     }
 
-    int posicion= 50;
-    int cont_ceros=0;
+    int posicion = 50;
+    int cont_ceros = 0;
     string instruccion;
 
     while(getline(input,instruccion)){
-        char dir=getDir(instruccion);
-        int num=getNum(instruccion);
-
-        if(dir=='R'){
-            posicion=(posicion+num)%100;
-        }else{
-            posicion=(posicion-num)%100;
-            
-            if(posicion<0){
-                posicion =posicion+100;
+        char dir = getDir(instruccion);
+        int num = getNum(instruccion);
+        
+        //Cambios dia1_2 (movemos de 1 en 1)
+        for(int i = 0 ; i < num ; i++ ){
+            if(dir == 'R'){
+                posicion++;
+                if(posicion == 100){
+                    posicion = 0;
+                }
+            }else{
+                posicion--;
+                if(posicion < 0){
+                    posicion = posicion + 100;
+                } 
+            }
+            if(posicion == 0){
+                cont_ceros++;
             }
         }
 
-        if(posicion==0){
-            cont_ceros++;
-        }
+        
     }
     input.close();
     cout << "La contrasenya es: " << cont_ceros << endl;
