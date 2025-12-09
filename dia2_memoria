@@ -1,0 +1,25 @@
+DIA 2: Advent of Code
+
+1. Por qué hemos elegido este problema
+Hemos elegido este problema porque vemos que es una interesante combinación de manejo de strings (para analizar la estructura de los números) y lectura de entradas complejas (con rangos separados por comas y guiones). Esto nos ha ayudado a practicar con de cadenas de texto y la lógica de repetición de patrones.
+
+2. Técnica y Estructuras de Datos Empleadas
+Implementamos la función invalidos(long long inicio, long long fin) utilizando una técnica de recursión con Divide y Vencerás para recorrer el rango de números. El caso base de la recursión (inicio == fin) es donde se realiza la comprobación del patrón. Los resultados de las llamadas recursivas se suman (izquierda + derecha) hasta calcular la suma total del rango original.
+
+3. Abordaje de la Resolución del Problema
+Nuestra manera de resolverlo
+(main)
+El bucle principal se encarga de leer el archivo puzzle.txt. Utilizamos stringstream anidados para manejar los delimitadores: Primero, separamos la línea completa por comas (,) para obtener cada segmento de rango ("11-22").
+Dentro de cada segmento, localizamos el guion (-) usando find("-") y usamos stoll() para convertir las subcadenas resultantes en los límites numéricos inicio y fin de tipo long long.
+
+(inválidos)
+Para cada par de inicio y fin, llamamos a la función recursiva. Esta función descompone el problema en el caso base más simple:
+El caso base: Cuando la recursión llega a un único número (inicio == fin), realizamos la comprobación. Convertimos el número a string. Comprobamos si su longitud es par. Si es impar, no puede ser un patrón doble repetido. Si es par, dividimos la cadena exactamente por la mitad. Comparamos si la primera mitad es igual a la segunda. Si lo es, el número es inválido y lo devolvemos para que se sume al total; si no lo es, devolvemos 0.
+
+
+Otras alternativas
+La otra opción era resolver la suma de inválidos con un bucle for simple, pero reconocemos que el enfoque iterativo habría sido más eficiente en términos de memoria para recorrer rangos grandes y evita el riesgo de un Stack Overflow. Sin embargo, elegimos la recursión con Divide y Vencerás precisamente porque queríamos practicar ese paradigma y entender mejor sus límites en este contexto.
+
+
+4. Valoración Personal y Aprendizaje
+El aprendizaje clave fue cómo aplicar la recursión como una estructura de control para recorrer un espacio de búsqueda (los rangos). Aunque la solución más directa y eficiente para este problema en concreto era la iteración.
