@@ -1,64 +1,75 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-template <typename T> 
+
+template <typename T>
 class BSNode {
-    public:
-        //ATRIBUTOS
-	T elem;			//Elemento almacenado
-	BSNode<T>* left;	//Puntero al nodo sucesor izquierdo
-	BSNode<T>* right;	//Puntero al nodo sucesor derecho
-    
-	//MÉTODOS
-	//Constructor
-	BSNode(T elem, BSNode<T>* left=nullptr, BSNode<T>* right=nullptr):elem{elem}, left{left}, right{right}{}
+public:
+    // ATRIBUTOS
+    T elem;                 // Elemento almacenado
+    BSNode<T>* left;        // Puntero al nodo sucesor izquierdo
+    BSNode<T>* right;       // Puntero al nodo sucesor derecho
 
+    // MÉTODOS
+    // Constructor
+    BSNode(T elem, BSNode<T>* left=nullptr, BSNode<T>* right=nullptr)
+        : elem{elem}, left{left}, right{right} {}
 };
 
-template <typename T> 
+template <typename T>
 class BSTree {
-    private:
-        //ATRIBUTOS
-	int nelem;		//Nº elementos almacenados
-	BSNode<T> *root;	//Nodo raiz
+private:
+    // ATRIBUTOS
+    long long nelem;              // Nº elementos almacenados
+    BSNode<T>* root;        // Nodo raiz
 
-	//MÉTODOS
-	//Inserción de elementos
-	BSNode<T>* insert(BSNode<T>* n, T e){
-		if(n == null){
-			return new Node(e);
-		}else if (n->elem == e){
-			break;
-		}else if (n->elem < e){
-			n->right = insert(n->right, e);
-		}else{
-			n->left = insert(n->left, e);
-		}
+    // MÉTODOS
+    // Inserción de elementos (versión interna)
+    // Devuelve el nuevo subárbol y un flag de si se insertó (para actualizar nelem)
+    std::pair<BSNode<T>*, bool> insert(BSNode<T>* n, const T& e) {
+        if (n == nullptr) {
+            // crear nodo nuevo
+            return { new BSNode<T>(e), true };            // ← cambio (BSNode, y devolvemos flag)
+        } else if (n->elem == e) {
+            // duplicado: no insertamos nada
+            return { n, false };                           // ← cambio (no devolver -1; mantener el nodo y flag=false)
+        } else if (n->elem < e) {
+            auto res = insert(n->right, e);                // ← cambio (propagar flag)
+            n->right = res.first;
+            return { n, res.second };
+        } else {
+            auto res = insert(n->left, e);                 // ← cambio (propagar flag)
+            n->left = res.first;
+            return { n, res.second };
+        }
+    }
 
-		return n;
-	}
+public:
+    // MÉTODOS
+    // Creación y tamaño
+    BSTree() : nelem{0}, root{nullptr} {}                  // ← cambio (inicializar root)
 
-    public:
-    //MÉTODOS
-	//Creación y tamaño
-	BSTree(): nelem{0}{}	//Constructor vacio
+    long long size() const {                                     // Devuelve el nº de elementos
+        return nelem;
+    }
 
-	int size() const{	//Devuelve el nº de elementos
-		return nelem;
-	}
-	
-
-	//Inserción de elementos
-	void insert(T e){
-		root = insert(root, e);
-	}
-
+    // Inserción de elementos (API pública)
+    // Devuelve 1 si se insertó, 0 si era duplicado
+    long long insert(const T& e) {                               // ← cambio (firma y retorno coherente)
+        auto res = insert(root, e);                        // llama a la interna
+        root = res.first;
+        if (res.second) ++nelem;                           // ← cambio (actualizar nelem solo si insertó)
+        return res.second ? 1 : 0;
+    }
 };
-
 
 
 
 int main(){
+    
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     //Obtener datos del archivo
     ifstream input("input.txt");
     if(!input.is_open()){ 
@@ -71,7 +82,6 @@ int main(){
     vector<pair<long long, long long>> rango;
     bool cambiarDato = false;
     long long solucion = 0;
-    long long cont, aux;
     BSTree<long long> bstree = BSTree<long long>();
 
     while(getline(input, linea)){
@@ -87,45 +97,12 @@ int main(){
 
             rango.push_back({mini, maxi});
 
-            for(int i = 0; i < rango.size(); i++){
-                for(int i = rango[i].first; i <= rango[i].second; i++){
-                    bstree.insert(i);
+            for(long long i = 0; i < rango.size(); i++){
+                for(long long j = rango[i].first; j <= rango[i].second; j++){
+                    bstree.insert(j);
                 }
             }
             
-
-            /*
-            for(int i = 0; i < rango.size(); i++){
-                cont = 0;
-                if (maxi < rango[i].second && mini > rango[i].first){    //El rango esta contenido en otro más grande
-                        cont = 0;
-                        break;
-                }
-
-                if(mini < rango[i].second){
-                    if(maxi > rango[i].second && mini > rango[i].first){       // El mini esta contenido pero el maxi esta fuera de otro rango.
-                        if(cont != 0){                      //Por si ya ha hecho calculos respecto otro rango
-                            aux = maxi + 1 - rango[i].second;
-                            cont = abs(aux - cont);
-                        }else{
-                            cont = maxi + 1 - rango[i].second;
-                        }
-                    }
-                }else if(maxi < rango[i].second){  
-                    if(mini < rango[i].first && maxi > rango[i].first){      //Maxi esta contenido pero mini esta fuera de otro rango
-                        if(cont != 0){
-                            aux = rango[i].first + 1 - mini;
-                            cont = abs(aux - cont);
-                        }else{
-                            cont = rango[i].first + 1 - mini;
-                        }
-                    }
-                }else if((mini < rango[i].first && maxi < rango[i].first) || (mini > rango[i].second && maxi > rango[i].second)){
-                    cont = maxi + 1 - mini;
-                }
-            }
-            solucion += cont;
-            */
         }
         
     }
