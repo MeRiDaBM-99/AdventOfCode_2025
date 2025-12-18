@@ -3,7 +3,7 @@
 ## Componentes del grupo 
 
 - Sonia S Galeas
-- Marcos Mérida Bustamante 
+- Marcos Mérida  
 - Lucía Remolar
 - Marta Ros
 
