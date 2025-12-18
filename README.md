@@ -1,4 +1,4 @@
-' # Advent of Code 2025 — Día 9: Movie Theater '
+# Advent of Code 2025 — Día 9: Movie Theater
 
 ## Componentes del grupo 
 
@@ -17,6 +17,7 @@
 
 ### Alternativas para mejorar la resolución
 5 valoración personal sobre qué se ha aprendido y porqué ha sido significativo
+
 
 
 
