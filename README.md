@@ -50,7 +50,7 @@ Este problema fue elegido porque combina varios aspectos interesantes:
 Además, es un reto que permite aplicar estructuras de datos y algoritmos de forma práctica, reforzando conceptos de programación vistos en clase.
 
 ### Técnicas y estructuras de datos empleadas
-Para la resolución final se ha optado por un engoque matemático y geométrico, prescindiendo de la simulación pixel a pixel, dado que se trabaja con una gran cantidad de datos e incluso, se llega a exceder la memoria disponible. 
+Para la resolución final se ha optado por un enfoque matemático y geométrico, prescindiendo de la simulación pixel a pixel, dado que se trabaja con una gran cantidad de datos e incluso, se llega a exceder la memoria disponible. 
 
 #### Estructuras de Datos:
 `struct Point`: una estructura personalizada ligera para manejar coordenadas `(x, y)`. Se ha utilizado el tipo de dato long long para evitar desbordamientos de buffer (overflow), dado que el cálculo del área (`ancho * alto`) puede superar el límite de un entero de 32 bits.
