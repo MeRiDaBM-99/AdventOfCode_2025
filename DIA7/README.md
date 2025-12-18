@@ -13,7 +13,7 @@
   El objetivo principal es determinar el número total de procesos de división (splits) que ocurren desde que el haz entra en el sistema hasta que todos los haces     resultantes abandonan la rejilla.
   
 ## Justificación de la elección del problema
-
+  El problema tiene dos fases que requieren enfoques distintos. La Parte 1 se basa en la exploración de una red para localizar elementos, mientras que la Parte 2 requiere un análisis combinatorio de trayectorias. Se han seleccionado estas soluciones por su eficiencia en el manejo de grandes volúmenes de datos, evitando redundancias mediante el control de estados.
 ## Técnicas y estructuras de datos empleadas
 
 
