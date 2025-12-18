@@ -11,13 +11,14 @@
 
 ## Justificación de la elección del problema
 
-### Técnicas y estructuras de datos empleadas
+## Técnicas y estructuras de datos empleadas
 
-### Descripción de la resolución del problema
+## Descripción de la resolución del problema
 
-### Alternativas para mejorar la resolución
+## Alternativas para mejorar la resolución
 
-### Valoración personal 
+## Valoración personal 
+
 
 
 
