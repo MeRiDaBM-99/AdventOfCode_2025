@@ -1,4 +1,4 @@
-Advent of Code 
+#Advent of Code 
 Memoria dia 4
 
 ELECCION
