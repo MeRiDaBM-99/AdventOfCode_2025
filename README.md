@@ -9,7 +9,7 @@
 
 ## Descripción del problema
 
-###Justificación de la elección del problema
+##Justificación de la elección del problema
 
 ###Técnicas y estructuras de datos empleadas
 
