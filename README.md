@@ -2,20 +2,22 @@
 
 ## Componentes del grupo 
 
-- Sonia S Galeas
+- 'Sonia S Galeas'
 - Marcos Mérida Bustamante 
 - Lucía Remolar
 - Marta Ros
 
-## Descripción del problema
+### Descripción del problema
 
-##Justificación de la elección del problema
+## Justificación de la elección del problema
 
-###Técnicas y estructuras de datos empleadas
+### Técnicas y estructuras de datos empleadas
 
-###Descripción de la resolución del problema
+### Descripción de la resolución del problema
 
-###
+### Alternativas probadas y descartadas
+
+### Valoración personal y personaje
 1 por qué habéis elegido ese problema
 2 qué técnica o estructura de datos (o las dos) se emplean
 3 la descripción de cómo se ha abordado la resolución del problema
