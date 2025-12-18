@@ -8,7 +8,7 @@
 - Marta Ros
 
 ### Descripción del problema
-El reto consiste en analizar un suelo de baldosas dispuesto en una cuadrícula. Algunas baldosas están marcadas como rojas y se nos pide encontrar el rectángulo de mayor área que tenga dos baldosas rojas como esquinas opuestas. Ejemplo visual del enunciado: 
+El reto consiste en analizar un suelo de baldosas dispuesto en una cuadrícula. Algunas baldosas están marcadas como rojas y se nos pide encontrar `el rectángulo de mayor área que tenga dos baldosas rojas como esquinas opuestas`. Ejemplo visual del enunciado: 
 ```
 ..............
 .......#...#..
@@ -21,7 +21,7 @@ El reto consiste en analizar un suelo de baldosas dispuesto en una cuadrícula. 
 ..............
 ```
 
-En la segunda parte del problema, la restricción aumenta: el rectángulo no solo debe tener esquinas rojas, sino que todas las baldosas que lo conforman deben ser rojas o verdes. Las verdes se generan automáticamente como conexiones entre las rojas, formando un contorno cerrado que delimita la zona válida. Ejemplo visual del problema:
+En la segunda parte del problema, la restricción aumenta: el rectángulo no solo debe tener esquinas rojas, sino que `todas las baldosas que lo conforman deben ser rojas o verdes`. Las verdes se generan automáticamente como conexiones entre las rojas, formando un contorno cerrado que delimita la zona válida. Ejemplo visual del problema:
 ```
 ..............
 .......#XXX#..
