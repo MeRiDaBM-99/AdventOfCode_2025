@@ -1,14 +1,27 @@
-*Memoria Dia --*
+# Advent of Code 2025 — Día 9: Movie Theater
 
-##¿Por qué hemos elegido ese problema?
+## Componentes del grupo 
 
-##¿Qué técnica o estructura de datos  se emplean?
+- Sonia S Galeas
+- Marcos Mérida Bustamante 
+- Lucía Remolar
+- Marta Ros
 
-##Descripción de resolución del problema
+## Descripción del problema
 
-##Alternativas que se han probado y descartado o que se podrían plantear para mejorar la resolución
+##Justificación de la elección del problema
 
-##Valoración personal sobre qué se ha aprendido y porqué ha sido significativo
+###Técnicas y estructuras de datos empleadas
+
+###Descripción de la resolución del problema
+
+###
+1 por qué habéis elegido ese problema
+2 qué técnica o estructura de datos (o las dos) se emplean
+3 la descripción de cómo se ha abordado la resolución del problema
+4 alternativas que se han probado y descartado o que se podrían plantear para mejorar la resolución
+5 valoración personal sobre qué se ha aprendido y porqué ha sido significativo
+
 
 
 
