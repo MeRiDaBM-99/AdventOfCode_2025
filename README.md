@@ -58,35 +58,33 @@ Para la resolución final se ha optado por un enfoque matemático y geométrico,
 `std::vector`: utilizado para almacenar secuencialmente los vértices que definen el polígono (el borde rojo/verde). Permite un acceso rápido e iterativo para las comprobaciones geométricas.
 
 #### Técnicas Algorítmicas:
-- Geometría Vectorial: en lugar de tratar el mapa como una imagen de bits, lo tratamos como un conjunto de vectores.
+- `Geometría Vectorial`: en lugar de tratar el mapa como una imagen de bits, lo tratamos como un conjunto de vectores.
 
-- Detección de Intersección de Segmetos: lógica para verificar si alguna línea del borde del polígono 'corta' o atraviesa el rectángulo considerado.
+- `Detección de Intersección de Segmetos`: lógica para verificar si alguna línea del borde del polígono 'corta' o atraviesa el rectángulo considerado.
 
-/*
-- Conjuntos (hash set): para comprobar rápidamente si una coordenada pertenece al conjunto de baldosas rojas o verdes.
-
-- Generación de rectángulos: se iteraron todas las posibles parejas de baldosas rojas como esquinas opuestas, calculando el área del rectángulo definido por ellas.
-
-- Validación de rectángulos:
+- `Validación de rectángulos`:
   - En la primera parte, bastaba con calcular el área.
   - En la segunda parte, se verificó que todas las baldosas dentro del rectángulo pertenecieran al conjunto de baldosas válidas (rojas o verdes).
-*/
 
 ### Descripción de la resolución del problema
-El abordaje del problema se dividió en tres fases claras:
+Se ha dividido en tres fases claras la resolución del problema: 
 
 - `Lectura y Normalización`: Se procesa el archivo de entrada para extraer las coordenadas de los azulejos rojos, que actúan como vértices del polígono. Estos se almacenan en orden secuencial para reconstruir el perímetro.
-- `Generación de Candidatos`: Dado que el rectángulo de área máxima debe tener vértices rojos en esquinas opuestas, iteramos sobre todos los pares posibles de puntos $(P_i, P_j)$. Esto reduce el espacio de búsqueda drásticamente en comparación con probar coordenadas aleatorias.
+- `Generación de Candidatos`: Dado que el rectángulo de área máxima debe tener vértices rojos en esquinas opuestas, iteramos sobre todos los pares posibles de puntos (P_i, P_j). Esto reduce el espacio de búsqueda drásticamente en comparación con probar coordenadas aleatorias.
 - `Validación Geométrica`: Para cada par que forma un rectángulo con un área mayor al máximo actual encontrado (poda de optimización), realizamos dos verificaciones:
   - `Verificación de Cortes`: Comprobamos cada segmento del polígono. Si algún segmento atraviesa el interior del rectángulo (entra por un lado y sale por otro), el rectángulo se descarta, ya que contendría puntos que no son válidos.
   - `Verificación de Inclusión`: Si no hay cortes, verificamos si el rectángulo está dentro del bucle usando Ray Casting sobre su punto central. Si el número de intersecciones del rayo con el borde es impar, el rectángulo es válido.
 
 ### Alternativas probadas y descartadas
-- Brute force completo con matriz bidimensional: se intentó representar toda la cuadrícula como una matriz de caracteres, pero resultó ineficiente para tamaños grandes.
+Antes de llegar a la solución geométrica, se intentaron enfoques más tradicionales que fueron descartados por ineficienda o incompatibilidad. 
 
-- Algoritmos de barrido (sweep line): se consideró recorrer filas y columnas buscando rectángulos válidos, pero la validación de la segunda parte era más sencilla con conjuntos.
+- `Fuerza bruta con matriz bidimensional`: se intentó representar toda la cuadrícula como una matriz de caracteres, pero resultó ineficiente para tamaños grandes.
 
-- Optimización con preprocesamiento de áreas: se pensó en usar estructuras tipo segment tree para validar áreas rápidamente, pero la complejidad añadida no compensaba frente al enfoque directo con conjuntos.
+- `Algoritmos de barrido`: se consideró recorrer filas y columnas buscando rectángulos válidos, pero la validación de la segunda parte era más sencilla con conjuntos.
+
+- `Optimización con preprocesamiento de áreas`: se pensó en usar estructuras tipo segment tree para validar áreas rápidamente, pero la complejidad añadida no compensaba frente al enfoque directo con conjuntos.
+
+La solución geométrica final reduce la complejidad de verificar un rectángulo de `O(Área)` a `O(N)`, donde `N es el número de paredes del perímetro`, haciendo la ejecución instantánea.
 
 ### Valoración personal y personaje
 1 por qué habéis elegido ese problema
