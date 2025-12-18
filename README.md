@@ -16,7 +16,8 @@
 ### Descripción de la resolución del problema
 
 ### Alternativas para mejorar la resolución
-5 valoración personal sobre qué se ha aprendido y porqué ha sido significativo
+
+### Valoración personal 
 
 
 
