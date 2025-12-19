@@ -70,7 +70,9 @@ Para la resolución final se ha optado por un enfoque matemático y geométrico,
 Se ha dividido en tres fases claras la resolución del problema: 
 
 - `Lectura y Normalización`: Se procesa el archivo de entrada para extraer las coordenadas de los azulejos rojos, que actúan como vértices del polígono. Estos se almacenan en orden secuencial para reconstruir el perímetro.
+  
 - `Generación de Candidatos`: Dado que el rectángulo de área máxima debe tener vértices rojos en esquinas opuestas, iteramos sobre todos los pares posibles de puntos (P_i, P_j). Esto reduce el espacio de búsqueda drásticamente en comparación con probar coordenadas aleatorias.
+  
 - `Validación Geométrica`: Para cada par que forma un rectángulo con un área mayor al máximo actual encontrado (poda de optimización), realizamos dos verificaciones:
   - `Verificación de Cortes`: Comprobamos cada segmento del polígono. Si algún segmento atraviesa el interior del rectángulo (entra por un lado y sale por otro), el rectángulo se descarta, ya que contendría puntos que no son válidos.
   - `Verificación de Inclusión`: Si no hay cortes, verificamos si el rectángulo está dentro del bucle usando Ray Casting sobre su punto central. Si el número de intersecciones del rayo con el borde es impar, el rectángulo es válido.
