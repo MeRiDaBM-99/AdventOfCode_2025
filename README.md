@@ -36,6 +36,15 @@ Para la resolucion de este problema, se ha empleado, como se ha mencionado anter
 
 ## Descripción de la resolución del problema
 
+Para la resolcución de este problema se ha implementado una estructura de arbol basado en intervalos, de ma era que se ha creado dos archivos.h.
+
+Por un lado tenemos BSNode.h, el cual contiene la clase BSNode, que implementa un nodo. Para este problema era necesario tener la capacidad de guardar rangos por lo que se procedio a crear dos variables (inicio, fin), los cuales marcaban los extremos del intervalo.
+
+Por otro lado tambien se ha creado el archivo BSTree.h, el cual contiene la clase BSTree, que implementa un arbol de intervalos (se dice que es de intervalos ya que, el nodo no solo contine un elemente sino el intervalo antes mencionado en BSNode). En esta clase se encuentran las funciones insert y search:
+
+- Seach: esta se trada de un funcion booleana a la cual se le paso como argumento un valor (identificador) y un nodo. Lo que realiza internamente es comparar el identificador con los rangos del nodo y dependiendo si es mayot o menor, explora el lado izquierdo o derecho del arbol. Cuando encuetra una coincidencia devuelve True sino devuekve False.
+- Insert: a esta funcion se le pasa un rango como argumento y dependiendo del valor de estos se inserta en el arbol (compara los valores del nuevo rango con los de los nodos actuales para saber si desplazarse a la izquierda o a la derecha).
+
 
 
 ## Alternativas para mejorar la resolución
@@ -43,3 +52,4 @@ Para la resolucion de este problema, se ha empleado, como se ha mencionado anter
 
 
 ## Valoración personal 
+
