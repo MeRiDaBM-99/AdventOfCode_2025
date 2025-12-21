@@ -26,8 +26,7 @@ A continuación se justifica porque no se ha elegido el resto de técnicas dadas
 * Árboles binarios, como lo que hemos dado en clase son árboles binarios (dos ramas) se complicaba su implementación, sobre todo cuando se converge entre sí los rayos.
 * Tabla Hash, aunque se hace uso de un 'mapa' para indicar los lugares visitados, esta técnica no se pasa como una posible implementación para este problema.
 
-## Otras alternativas.
-Realizar un grafo explícito dificultaba un poco la tarea, sobre todo a la hora de los problemas del AoC que suelen ser a muy gran escala, haciendo que se tarde en cargar el ouput con la solución. Además de tener que implementar las clases y funciones necesarias para su funcionamiento.
+Por último, realizar un grafo explícito dificultaba un poco la tarea, sobre todo a la hora de los problemas del AoC que suelen ser a muy gran escala, haciendo que se tarde en cargar el ouput con la solución. Además de tener que implementar las clases y funciones necesarias para su funcionamiento.
 
 ## Valoración grupal
 El grupo decidió tener en cuenta este día del AoC, ya que en sus dos problemas embarcan como soluciones el emplear dos de las técnicas dadas en clase y no solo una o ninguna en su caso. Además se piensa que se ha elegido las soluciones más adecuadas para ambas partes, observando las diferencias cuando se pide 'explorar' y cuando se pide 'analizar combinaciones'.
