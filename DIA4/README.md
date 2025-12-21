@@ -7,7 +7,7 @@
 - Lucía Remolar
 - Marta Ros
 
-## Descripción del problema
+## Justificación de la elección del problema
 Elegimos este problema del Advent of Code porque nos pareció interesante desde el punto de vista algorítmico y nos permitía aplicar estructuras estudiadas en la asignatura, especialmente los grafos. Además, consideramos que suponía un reto adecuado para el grupo, tanto por su complejidad como por la búsqueda conjunta de una solución eficiente.
 
 ##  Técnicas y estructuras empleadas
