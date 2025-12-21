@@ -35,7 +35,7 @@ Ejemplo visual:
 El objetivo de la primera parte del problema es calcular cuantas veces se produce una división, mientras que en la segunda parte del problema el objetivo seria determinar cuantas posibles conbinaciones existen despues de que el taquión haya recorrido todas las posibles trayectorias.
 
 
-## Elección
+## Justificación de la elección del problema
 La elección de este problema se fundamenta en su idoneidad para aplicar las estrategias algorítmicas estudiadas durante el curso. El desafío del Día 7 permite, a través de sus dos partes, demostrar el dominio sobre estructuras de datos complejas y la capacidad de adaptación: se comienza con una exploración de estados (grafos) y se evoluciona hacia un problema de optimización combinatoria.
 
 ## Técnica empleada
