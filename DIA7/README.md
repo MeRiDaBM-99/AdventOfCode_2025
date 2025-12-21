@@ -9,9 +9,9 @@
 
 ## Descripción del problema
 
-El problema consiste en analizar el comportamiento de un *manifold de taquiones* dentro de un laboratorio de teletrasportacion. El sistema recibe un haz de taquiones que entra por una posicion inicial (`S`) y se desplaza hacia abajo.
+El problema consiste en analizar el comportamiento de un *manifold de taquiones* dentro de un laboratorio de teletrasportación. El sistema recibe un haz de taquiones que entra por una posición inicial (`S`) y se desplaza hacia abajo.
 
-Este haz atraviesa las posiciones vacías (`.`), pero cuando encuentra un *splitter* (`^`), se divede en dos nuevos haces, uno continua hacia el lado izquierdo, mientras que el otro continua por el lado derecho. Esto se repipe cada vez que el haz se encuentra con el *splitter*, generando multiples haces.
+Este haz atraviesa las posiciones vacías (`.`), pero cuando encuentra un *splitter* (`^`), se divide en dos nuevos haces, uno continúa hacia el lado izquierdo, mientras que el otro continúa por el lado derecho. Esto se repite cada vez que el haz se encuentra con el *splitter*, generando múltiples haces.
 
 Ejemplo visual:
 ```
@@ -32,7 +32,7 @@ Ejemplo visual:
 .^.^.^.^.^...^.
 .............
 ```
-El objetivo de la primera parte del problema es calcular cuantas veces se produce una división, mientras que en la segunda parte del problema el objetivo seria determinar cuantas posibles conbinaciones existen despues de que el taquión haya recorrido todas las posibles trayectorias.
+El objetivo de la primera parte del problema es calcular cuantas veces se produce una división, mientras que en la segunda parte del problema el objetivo sería determinar cuantas posibles combinaciones existen después de que el taquión haya recorrido todas las posibles trayectorias.
 
 
 ## Justificación de la elección del problema
@@ -55,7 +55,7 @@ A continuación se justifica porque no se ha elegido el resto de técnicas dadas
 * Árboles binarios, como lo que hemos dado en clase son árboles binarios (dos ramas) se complicaba su implementación, sobre todo cuando se converge entre sí los rayos.
 * Tabla Hash, aunque se hace uso de un 'mapa' para indicar los lugares visitados, esta técnica no se pasa como una posible implementación para este problema.
 
-Por último, realizar un grafo explícito dificultaba un poco la tarea, sobre todo a la hora de los problemas del AoC que suelen ser a muy gran escala, haciendo que se tarde en cargar el ouput con la solución. Además de tener que implementar las clases y funciones necesarias para su funcionamiento.
+Por último, realizar un grafo explícito dificultaba un poco la tarea, sobre todo a la hora de los problemas del AoC que suelen ser a muy gran escala, haciendo que se tarde en cargar el output con la solución. Además de tener que implementar las clases y funciones necesarias para su funcionamiento.
 
 ## Valoración grupal
 El grupo decidió tener en cuenta este día del AoC, ya que en sus dos problemas embarcan como soluciones el emplear dos de las técnicas dadas en clase y no solo una o ninguna en su caso. Además se piensa que se ha elegido las soluciones más adecuadas para ambas partes, observando las diferencias cuando se pide 'explorar' y cuando se pide 'analizar combinaciones'.
