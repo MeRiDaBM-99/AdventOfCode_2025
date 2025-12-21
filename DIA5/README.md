@@ -26,7 +26,7 @@ Ejemplo visual:
 10-14
 16-20
 12-18
-           <- (Linea en blanco)
+           <- (Línea en blanco)
 1
 5
 8
@@ -39,7 +39,7 @@ El objetivo final se basa en **contabilizar cuantos ingredientes del segundo blo
 
 ## Justificación de la elección del problema
 
-El problema fue seleccionado ya que, pese a sus sencillez conceptual, presenta características que lo hacían apto para integrar estructuras más complejas que nos podían ser útil para la entrega de este trabajo.
+El problema fue seleccionado ya que, pese a su sencillez conceptual, presenta características que lo hacían apto para integrar estructuras más complejas que nos podían ser útil para la entrega de este trabajo.
 
 En particular, tanto los rangos como los ids abarcaban números muy grandes, lo que implicaba el uso de `long long`, con el cual si intentábamos resolverlas por métodos directos podía tener un alto coste.
 
@@ -63,13 +63,13 @@ Por otro lado también se ha creado el archivo **BSTree.h**, el cual contiene la
 Para la lectura del archivo input (en el `main`) se utilizó tanto `ifstream` como `getline()` para poder leer línea a línea el documento. Este, como ya se ha dicho en apartados anteriores, está dividido en dos bloques, lo que ha mejorado su lectura. Sabiendo que el primer bloque eran los rangos, se ha procedido a crear una variable booleana que indicase cuando se estuvieran leyendo rangos y cuando no, es decir cuando se estuviera leyendo identificadores. Esta variable se inicializa en un principio a *True* ya que al principio del documento se encuentran los rangos, cuando se encuentra con una línea en blanco (*empty line*) esta variable pasa a estar a *False*, lo que indica que empiezan los identificadores.
 
 - Cuando `rangos == True` se llama a la función insert y se inserta el lugar correspondiente del nodo con los intervalos en el árbol (previamente inicializado).
-- Por otro lado cuando `rangos == False` se llama a la función search, la cual busca si el identificador de la línea leida se encuentra en algún rango, si esto se da, la variable `definitivos` se incrementa (`definitivos++`), esta es la variable que lleva la cuenta de los alimentos frescos encontrados y se inicializa previamente en 0. Si no el identificador no se encuentra continua con la siguiente línea. 
+- Por otro lado cuando `rangos == False` se llama a la función search, la cual busca si el identificador de la línea leída se encuentra en algún rango, si esto se da, la variable `definitivos` se incrementa (`definitivos++`), esta es la variable que lleva la cuenta de los alimentos frescos encontrados y se inicializa previamente en 0. Si no el identificador no se encuentra continúa con la siguiente línea. 
 
 Por último se imprime por pantalla la variable definitivos con un `cout`.
 
 ## Alternativas rechazadas
 
-En este problema se habían propuesto otras alternativas de solución. Como se ha mencionado en apartados anteriores, en un principio existía la posibilidad de realizar la búsqueda de manera directa con arrays y vectores, sin embargo, al ver la longitud del documento y los datos, se optó por descartarla ya que haría la búsqueda muy pesada. Además concluimos en que este sería un problema en el cual se podría implementar árboles, lo que favorecía al trabajo.
+En este problema se habían propuesto otras alternativas de solución. Como se ha mencionado en apartados anteriores, en un principio existía la posibilidad de realizar la búsqueda de manera directa con arrays y vectores, sin embargo, al ver la longitud del documento y los datos, se optó por descartarla ya que haría la búsqueda muy pesada. Además concluimos en que este sería un problema en el cual se podría implementar árboles, lo que favorecía el trabajo.
 
 ## Valoración grupal 
 
