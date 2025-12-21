@@ -71,7 +71,7 @@ Por último se imprime por pantalla la variable definitivos con un `cout`.
 
 En este problema se habían propuesto otras alternativas de solución. Como se ha mencionado en apartados anteriores, en un principio existía la posibilidad de realizar la búsqueda de manera directa con arrays y vectores, sin embargo, al ver la longitud del documento y los datos, se optó por descartarla ya que haría la búsqueda muy pesada. Además concluimos en que este sería un problema en el cual se podría implementar árboles, lo que favorecía al trabajo.
 
-## Valoración personal 
+## Valoración grupal 
 
 Finalmente, todos los miembros del grupo han coincidido en que la resolución de este problema ha permitido aplicar conceptos vistos en clase, como lo pueden ser los árboles. Durante la resolución surgió la duda de si era un buen método implementar los árboles o aumentaría el coste, sin embargo finalmente optamos por implementarlo, ya que, al tener que leer archivos grandes con datos también grandes creímos necesario la implementación de un árbol, lo que nos ayudó también a comprender mejor las estructuras y reutilizar plantillas de las clases prácticas (los archivos.h son códigos modificados de las clases implementadas en las prácticas). En conjunto, el grupo lo considera como un buen problema para poder afianzar conocimientos. 
 
