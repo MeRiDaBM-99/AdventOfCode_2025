@@ -1,4 +1,4 @@
-# Advent of Code 2025 — Día 5: Cafeteria 
+# Advent of Code 2025 — Día 4: Printing Department
 
 ## Componentes del grupo 
 
