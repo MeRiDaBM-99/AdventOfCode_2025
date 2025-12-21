@@ -43,7 +43,7 @@ Para la primera parte, se ha optado por modelar el problema mediante **Grafos Im
 
 Para la segunda parte, dado que el problema exigía contar la totalidad de caminos posibles (lo que implica combinatoria), la estrategia cambia a **Programación Dinámica**. Implementamos un enfoque utilizando una tabla auxiliar M inicializada en -1. Esto permite almacenar el número de caminos desde una posición dada hasta el final; si el algoritmo revisita esa posición, recupera el valor calculado previamente en $O(1)$ en lugar de recalcular toda la rama, optimizando drásticamente el tiempo de ejecución.
 
-## Resolución del problema
+## Descripción de la resolución del problema
 Como se ha mencionado en el apartado anterior el problema se ha completado con sus dos partes:
 - En la Parte 1, tras la lectura del `input.txt` y la localización del punto de partida 'S', enfrentamos el problema de la convergencia de rayos. Para evitar bucles o procesamiento redundante, implementamos una matriz booleana de "visitados". El avance se gestiona mediante una cola extraemos la posición actual y calculamos la siguiente. Si es un espacio vacío, el rayo desciende; si es un divisor (^), bifurcamos el flujo añadiendo las coordenadas izquierda y derecha a la cola e incrementamos el contador de solución. El proceso termina cuando la cola se vacía.
 
