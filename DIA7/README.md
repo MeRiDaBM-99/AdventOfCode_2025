@@ -7,6 +7,10 @@
 - Lucía Remolar
 - Marta Ros
 
+## Descripción del problema
+
+
+
 ## Elección
 La elección de este problema se fundamenta en su idoneidad para aplicar las estrategias algorítmicas estudiadas durante el curso. El desafío del Día 7 permite, a través de sus dos partes, demostrar el dominio sobre estructuras de datos complejas y la capacidad de adaptación: se comienza con una exploración de estados (grafos) y se evoluciona hacia un problema de optimización combinatoria.
 
