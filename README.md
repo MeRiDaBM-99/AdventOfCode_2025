@@ -2,8 +2,8 @@
 
 ## Componentes del grupo 
 
-- Sonia S Galeas
-- Marcos Mérida Bustamante 
+- Sonia S. Galeas
+- Marcos Mérida  
 - Lucía Remolar
 - Marta Ros
 
@@ -13,6 +13,7 @@
 - **Dia 7**: Grafos + Programación Dinámica
 - **Dia 5**: Arbol de intervalos
 - **Dia 4**: Grafos
+
 
 
 
