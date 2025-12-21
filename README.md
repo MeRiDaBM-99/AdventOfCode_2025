@@ -15,14 +15,29 @@
 - **Dia 4**: Grafos
 
 
-Elección del problema
-
-Adecuación y desafío técnico del problema
+## Rúbrica
+### Elección del problema
 El problema es adecuado al tipo de técnica o estructura de datos elegida. Nivel de dificultad de los problemas
 
 Todos los problemas son casos claros para resolverse usando esa técnica y es necesario adatparla, combinarla con otras o extenderla
 
-(1,5) 10 Puntos
+### Código
+#### Corrección
+
+#### Calidad algorítmica y eficiencia
+
+#### Diseño y claridad del código
+
+### Memoria
+#### Justificación
+
+#### Descripción técnica
+
+#### Alternativas
+
+
+#### Valoración personal
+
 
 
 
