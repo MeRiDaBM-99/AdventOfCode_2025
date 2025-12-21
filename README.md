@@ -20,6 +20,21 @@ El input se trata de un documento de texto, el cual consta de **dos bloques** de
 - En el primer bloque se encuentran todos los rangos, definidos como valores de mínimo y máximo [*min, max*].
 - El segundo bloque contiene los id de cada uno de los ingredientes a comprobar.
 
+Ejemplo visual:
+```
+3-5
+10-14
+16-20
+12-18
+           <- (Linea en blanco)
+1
+5
+8
+11
+17
+32
+```
+
 El objetivo final se basa en **contabilizar cuantos ingredientes del segundo bloque se consideran frescos**.
 
 ## Justificación de la elección del problema
@@ -59,3 +74,4 @@ En este problema se habían propuesto otras alternativas de solución. Como se h
 ## Valoración personal 
 
 Finalmente, todos los miembros del grupo han coincidido en que la resolución de este problema ha permitido aplicar conceptos vistos en clase, como lo pueden ser los árboles. Durante la resolución surgió la duda de si era un buen método implementar los árboles o aumentaría el coste, sin embargo finalmente optamos por implementarlo, ya que, al tener que leer archivos grandes con datos también grandes creímos necesario la implementación de un árbol, lo que nos ayudó también a comprender mejor las estructuras y reutilizar plantillas de las clases prácticas (los archivos.h son códigos modificados de las clases implementadas en las prácticas). En conjunto, el grupo lo considera como un buen problema para poder afianzar conocimientos. 
+
