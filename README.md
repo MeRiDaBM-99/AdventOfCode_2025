@@ -1,4 +1,4 @@
-# Advent of Code 2025 — Día 9: Movie Theater
+# Advent of Code 2025
 
 ## Componentes del grupo 
 
@@ -7,17 +7,8 @@
 - Lucía Remolar
 - Marta Ros
 
-## Descripción del problema
+## Entregas
 
-## Justificación de la elección del problema
-
-## Técnicas y estructuras de datos empleadas
-
-## Descripción de la resolución del problema
-
-## Alternativas para mejorar la resolución
-
-## Valoración personal 
 
 
 
