@@ -38,7 +38,7 @@ El objetivo de la primera parte del problema es calcular cuantas veces se produc
 ## Justificación de la elección del problema
 La elección de este problema se fundamenta en su idoneidad para aplicar las estrategias algorítmicas estudiadas durante el curso. El desafío del Día 7 permite, a través de sus dos partes, demostrar el dominio sobre estructuras de datos complejas y la capacidad de adaptación: se comienza con una exploración de estados (grafos) y se evoluciona hacia un problema de optimización combinatoria.
 
-## Técnica empleada
+## Técnicas y estructuras de datos empleadas
 Para la primera parte, se ha optado por modelar el problema mediante **Grafos Implícitos**. En lugar de crear una estructura de nodos enlazados en memoria, utilizamos la propia matriz de entrada como el grafo, donde cada celda es un nodo y las transiciones (bajar o bifurcarse en ^) son las aristas. La estrategia concreta es una Búsqueda en Anchura (BFS). Esta elección es ideal para la simulación física del problema (un rayo que desciende capa por capa). Al no buscar una ruta óptima sino simplemente contar eventos y simular el flujo, la BFS garantiza un recorrido ordenado y sin redundancias gracias al control de visitados.
 
 Para la segunda parte, dado que el problema exigía contar la totalidad de caminos posibles (lo que implica combinatoria), la estrategia cambia a **Programación Dinámica**. Implementamos un enfoque utilizando una tabla auxiliar M inicializada en -1. Esto permite almacenar el número de caminos desde una posición dada hasta el final; si el algoritmo revisita esa posición, recupera el valor calculado previamente en $O(1)$ en lugar de recalcular toda la rama, optimizando drásticamente el tiempo de ejecución.
