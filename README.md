@@ -10,9 +10,8 @@
 ## Entregas
 
 - **Dia 11**: Grafos + Tabla Hash
-- **Dia 7**: Grafos + Programación Dinámica
+- **Dia 7**: Programación Dinámica
 - **Dia 5**: Arbol de intervalos
-- **Dia 4**: Grafos
 
 
 ## Rúbrica
@@ -53,6 +52,7 @@ En los problemas seleccionados se incluye alguna de las dos cosas: soluciones qu
 #### Valoración personal
 Evidencia consistente. 
 El grupo incluye una valoración personal en todos los problemas que da detalles sobre qué les ha aportado la resolución de estos problemas a los miembros del equipo.
+
 
 
 
