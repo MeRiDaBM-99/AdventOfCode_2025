@@ -1,31 +1,31 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-const int tam = 400;
+const int tam = 400; //Tamaño de la Tabla Hash
 
-struct Nodo {
-    char nombre[20];
-    vector<Nodo*> salidas;
-    Nodo *next;  
+struct Nodo { // Estructura del nodo del grafo, representa un dispositivo.
+    char nombre[20]; // Nombre del dispositivo.
+    vector<Nodo*> salidas; // Vector que contiene los dispositivos a los que puede conectarse.
+    Nodo *next; // Puntero al nodo siguiente, en el caso de que haya colision en la Tabla Hash.
 };
 
-struct Hash {
+struct Hash { //Estructura para la Tabla Hash, consta de un array de punteros a nodos.
     Nodo *tabla[tam];
 };
 
-void iniciarTabla(Hash &h){
+void iniciarTabla(Hash &h){ // Esta funcion inicializa la tabla vacia, para despues ir rellenandola.
     for(int i = 0; i< tam; i++)
         h.tabla[i] = nullptr;
 }
 
-int nombre_a_numero(const char *nombre){
+int nombre_a_numero(const char *nombre){ // Convierte un nombre a un id para la Tabla Hash.
     int sum = 0;
-    for(int i = 0; nombre[i] != '\0'; i++)
+    for(int i = 0; nombre[i] != '\0'; i++) // Lee caracter a caracter sumando su valor en ASCII, y guardandolo en la variable sum.
         sum+= nombre[i];
-    return sum % tam;
+    return sum % tam; // Hace el modulo entre sum y tam para obtener el id final.
 }
 
-Nodo* buscar_nombre(Hash &h, const char *nombre) {
+Nodo* buscar_nombre(Hash &h, const char *nombre) { 
     int idx = nombre_a_numero(nombre);
     Nodo *actual = h.tabla[idx];
     while (actual != NULL) {
@@ -99,3 +99,4 @@ int main(){
     cout << total << endl;
     return 0;
 }
+
