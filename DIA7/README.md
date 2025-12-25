@@ -46,11 +46,11 @@ Para resolverlo implementamos un enfoque recursivo con programación dinámica:
 - Tras leer el mapa `input.txt`y localizar la posición inicial S, definimos una función caminos() que calcula cuántas trayectorias válidas existen desde una posición concreta hasta el final del mapa.
 
 - Adaptamos la solución a un esquema recursivo con memoria. La función principal ahora retorna la suma de caminos válidos. Al encontrar un divisor, la función se llama recursivamente para las ramas izquierda y derecha, y almacena la suma de ambos resultados en la tabla de memoria. Se definieron casos base estrictos:
-  Si la posición sale por los laterales, el camino es inválido y retorna 0.
-  Si la posición supera la última fila, el camino es válido y retorna 1.
-  Si la celda ya fue calculada previamente, se recupera el valor almacenado en la tabla M.
-  Si la celda contiene un divisor ^, la función se bifurca recursivamente hacia izquierda y derecha.
-  Si la celda es un espacio vacío ., la función continúa hacia abajo.
+    - Si la posición sale por los laterales, el camino es inválido y retorna 0.
+    - Si la posición supera la última fila, el camino es válido y retorna 1.
+    - Si la celda ya fue calculada previamente, se recupera el valor almacenado en la tabla M.
+    - Si la celda contiene un divisor ^, la función se bifurca recursivamente hacia izquierda y derecha.
+    - Si la celda es un espacio vacío ., la función continúa hacia abajo. 
 El valor final es número total de líneas temporales posibles.
 ## Alternativas rechazadas
 A continuación se justifica porque no se ha elegido el resto de técnicas dadas como posibles soluciones.
